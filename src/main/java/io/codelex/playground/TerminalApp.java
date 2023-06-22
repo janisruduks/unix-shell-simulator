@@ -1,7 +1,7 @@
-package io.codelex.n00bterm;
+package io.codelex.playground;
 
-import io.codelex.n00bterm.sound.BackgroundSound;
-import io.codelex.n00bterm.terminal.*;
+import io.codelex.playground.sound.BackgroundSound;
+import io.codelex.playground.terminal.*;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -9,9 +9,7 @@ import java.util.Scanner;
 public class TerminalApp {
 
     //TODO maybe try to fix nobvim so it displays old content or something.
-    //TODO Implement colors is a must!
     //TODO Add different types of files. (idk for what reason)
-    //TODO split help section into parts?
 
     public static void main(String[] args) {
 
@@ -46,7 +44,6 @@ public class TerminalApp {
     }
 
     private static void commands(Scanner keyboard, TerminalServers servers, BackgroundSound music) {
-
         switch (keyboard.next()) {
             case "help" -> servers.getServerConnectedTo().printAllCommands();
             case "cd" -> servers.getServerConnectedTo().cd(keyboard.next());

@@ -1,4 +1,4 @@
-package io.codelex.n00bterm.sound;
+package io.codelex.playground.sound;
 
 import javax.sound.sampled.*;
 import java.io.IOException;

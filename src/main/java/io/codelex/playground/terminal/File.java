@@ -1,4 +1,4 @@
-package io.codelex.n00bterm.terminal;
+package io.codelex.playground.terminal;
 
 import java.util.Scanner;
 

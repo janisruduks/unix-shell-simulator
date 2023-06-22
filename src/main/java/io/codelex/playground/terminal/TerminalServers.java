@@ -1,4 +1,4 @@
-package io.codelex.n00bterm.terminal;
+package io.codelex.playground.terminal;
 
 import java.util.HashMap;
 
@@ -35,14 +35,6 @@ public class TerminalServers {
     }
 
     public void prettifyConnection(String serverName, boolean validServer, int delay) {
-
-        String connectionMessage;
-        if (validServer) {
-            connectionMessage = "Connected to " + serverName;
-        } else {
-            connectionMessage = "Failed to connect to " + serverName;
-        }
-
         for (int i = 0; i < delay; i++) {
             System.out.print("█");
             try {
@@ -52,6 +44,13 @@ public class TerminalServers {
             }
         }
         System.out.println();
-        System.out.println(connectionMessage);
+        System.out.println(validateServer(serverName, validServer));
+    }
+
+    private String validateServer(String serverName, boolean validServer) {
+        if (validServer) {
+            return "Connected to " + serverName;
+        }
+        return "Failed to connect to " + serverName;
     }
 }
